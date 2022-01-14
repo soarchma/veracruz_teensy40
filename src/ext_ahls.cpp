@@ -444,7 +444,8 @@ void ext_ahls_ceremony()
   // 현재 기어레버 상태 'P'일 경우만 동작
   if(0 == vs.tcu43F.u8CUR_GR)
   {
-    g_ahlsOffset_usr = -80;  // 1.28V
+    // g_ahlsOffset_usr = -80;  // 1.28V
+    g_ahlsOffset_usr = -93;  // 1.5V
     setTimeout(TIMER_INTERVAL_CEREMONY_WORK, ext_ahls_set_default);
   }
 }
