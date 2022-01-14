@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"name": "veracruz_teensy",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"utility": "cpp",
+			"*.tpp": "cpp",
+			"setup.h": "c",
+			"arduino.h": "c",
+			"flexcan_t4.h": "c",
+			"initt.h": "c"
+		}
+	}
+}
