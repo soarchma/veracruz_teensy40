@@ -8,14 +8,14 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "d:/Users/Documents/PlatformIO/Projects/veracruz_teensy40/include",
-                "d:/Users/Documents/PlatformIO/Projects/veracruz_teensy40/src",
-                "d:/Users/Documents/PlatformIO/Projects/veracruz_teensy40/lib/MCP41HV",
+                "d:/User/Documents/PlatformIO/Projects/veracruz_teensy40/include",
+                "d:/User/Documents/PlatformIO/Projects/veracruz_teensy40/src",
+                "d:/User/Documents/PlatformIO/Projects/veracruz_teensy40/lib/MCP41HV",
                 "C:/Users/shbaek/.platformio/packages/framework-arduinoteensy/libraries/SPI",
                 "C:/Users/shbaek/.platformio/packages/framework-arduinoteensy/libraries/FlexCAN_T4",
-                "d:/Users/Documents/PlatformIO/Projects/veracruz_teensy40/lib/TM1637",
+                "d:/User/Documents/PlatformIO/Projects/veracruz_teensy40/lib/TM1637",
                 "C:/Users/shbaek/.platformio/packages/framework-arduinoteensy/libraries/EEPROM",
-                "d:/Users/Documents/PlatformIO/Projects/veracruz_teensy40/.pio/libdeps/teensy40/TimerInterrupt_Generic/src",
+                "d:/User/Documents/PlatformIO/Projects/veracruz_teensy40/.pio/libdeps/teensy40/TimerInterrupt_Generic/src",
                 "C:/Users/shbaek/.platformio/packages/framework-arduinoteensy/cores/teensy4",
                 "C:/Users/shbaek/.platformio/packages/framework-arduinoteensy/libraries/ADC",
                 "C:/Users/shbaek/.platformio/packages/framework-arduinoteensy/libraries/AccelStepper/src",
@@ -118,14 +118,14 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "d:/Users/Documents/PlatformIO/Projects/veracruz_teensy40/include",
-                    "d:/Users/Documents/PlatformIO/Projects/veracruz_teensy40/src",
-                    "d:/Users/Documents/PlatformIO/Projects/veracruz_teensy40/lib/MCP41HV",
+                    "d:/User/Documents/PlatformIO/Projects/veracruz_teensy40/include",
+                    "d:/User/Documents/PlatformIO/Projects/veracruz_teensy40/src",
+                    "d:/User/Documents/PlatformIO/Projects/veracruz_teensy40/lib/MCP41HV",
                     "C:/Users/shbaek/.platformio/packages/framework-arduinoteensy/libraries/SPI",
                     "C:/Users/shbaek/.platformio/packages/framework-arduinoteensy/libraries/FlexCAN_T4",
-                    "d:/Users/Documents/PlatformIO/Projects/veracruz_teensy40/lib/TM1637",
+                    "d:/User/Documents/PlatformIO/Projects/veracruz_teensy40/lib/TM1637",
                     "C:/Users/shbaek/.platformio/packages/framework-arduinoteensy/libraries/EEPROM",
-                    "d:/Users/Documents/PlatformIO/Projects/veracruz_teensy40/.pio/libdeps/teensy40/TimerInterrupt_Generic/src",
+                    "d:/User/Documents/PlatformIO/Projects/veracruz_teensy40/.pio/libdeps/teensy40/TimerInterrupt_Generic/src",
                     "C:/Users/shbaek/.platformio/packages/framework-arduinoteensy/cores/teensy4",
                     "C:/Users/shbaek/.platformio/packages/framework-arduinoteensy/libraries/ADC",
                     "C:/Users/shbaek/.platformio/packages/framework-arduinoteensy/libraries/AccelStepper/src",
@@ -239,7 +239,7 @@
                 ""
             ],
             "cppStandard": "c++14",
-            "compilerPath": "C:/Users/shbaek/.platformio/packages/toolchain-gccarmnoneeabi@1.50401.190816/bin/arm-none-eabi-gcc.exe",
+            "compilerPath": "C:/Users/shbaek/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc.exe",
             "compilerArgs": [
                 "-mthumb",
                 "-mcpu=cortex-m7",

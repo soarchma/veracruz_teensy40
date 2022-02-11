@@ -46,8 +46,8 @@ MCP41HV (SPI) 제어로 AHLS Signal 출력 전압 조절
 #define DEF_VAL_OFFSET_DEF      0
 #define DEF_VAL_OFFSET_USER     0
 
-#define TIMER_INTERVAL_ENGINE_CHECK   1000  // 1.0 Sec
-#define TIMER_INTERVAL_CEREMONY_WORK  2000  // 1.5 Sec
+#define TIMER_INTERVAL_ENGINE_CHECK   500   // 0.5 Sec
+#define TIMER_INTERVAL_CEREMONY_WORK  2000  // 2.0 Sec
 
 
 bool g_bInitialized = false;
@@ -126,8 +126,8 @@ void ext_ahls_init()
 
   g_ahlsOffset_usr = DEF_VAL_OFFSET_USER;
 
-  // 세리모니 조건 검사 타이머 시작.
-    setTimeout(TIMER_INTERVAL_ENGINE_CHECK, ext_ahls_eng_check);
+  // 세리모니 조건 검사 타이머 시작. 부팅 후 최초 1회 2초 후 타이머 동작
+    setTimeout(TIMER_INTERVAL_ENGINE_CHECK * 4, ext_ahls_eng_check);
 }
 
 void ext_ahls_update()
@@ -449,4 +449,3 @@ void ext_ahls_ceremony()
     setTimeout(TIMER_INTERVAL_CEREMONY_WORK, ext_ahls_set_default);
   }
 }
-

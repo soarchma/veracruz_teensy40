@@ -55,10 +55,11 @@ void can_init()
   CAN_B.onReceive(MB0, canSniff);
   CAN_B.onReceive(MB1, canSniff);
   CAN_B.onReceive(MB2, canSniff);
-  CAN_B.setMBFilter(MB0, 0x0A0);
-  CAN_B.setMBFilter(MB1, 0x260);
-  CAN_B.setMBFilter(MB2, 0x329);
-  CAN_B.setMBFilter(MB3, 0x43F);
+  CAN_B.onReceive(MB3, canSniff);
+  CAN_B.setMBFilter(MB0, 0x250);
+  CAN_B.setMBFilter(MB1, 0x300);
+  CAN_B.setMBFilter(MB2, 0x350);
+  CAN_B.setMBFilter(MB3, 0x400);
   CAN_B.mailboxStatus();
 }
 
@@ -112,11 +113,11 @@ void canSniff_eng0A0(const CAN_message_t & msg)
 
   VS.update_eng0A0(msg);
 
-  Serial.print(",   ");
-  Serial.print(msg.buf[4], DEC);
-  Serial.print(" Km/h ");
-  Serial.print(temp.u16Rpm * 0.25);
-  Serial.println(" RPM");
+  Serial2.print(",   ");
+  Serial2.print(msg.buf[4], DEC);
+  Serial2.print(" Km/h ");
+  Serial2.print(temp.u16Rpm * 0.25);
+  Serial2.println(" RPM");
 
 }
 
@@ -129,41 +130,41 @@ void canSniff_ems260(const CAN_message_t & msg)
 
   if(msg.buf[3] & BIT_MASK_1_CRUISE_LAMP_MAIN)
   {
-    Serial.print("CRUISE ■ ");
+    Serial2.print("CRUISE ■ ");
   }
   else
   {
-    Serial.print("CRUISE □ ");
+    Serial2.print("CRUISE □ ");
   }
 
   if(msg.buf[3] & BIT_MASK_1_CRUISE_LAMP_SET)
   {
-    Serial.print("SET ■ ");
+    Serial2.print("SET ■ ");
   }
   else
   {
-    Serial.print("SET □ ");
+    Serial2.print("SET □ ");
   }
 
   if(msg.buf[3] & BIT_MASK_1_PRE_FUEL_CUT_IN)
   {
-    Serial.print("F-CUT ■ ");
+    Serial2.print("F-CUT ■ ");
   }
   else
   {
-    Serial.print("F-CUT □ ");
+    Serial2.print("F-CUT □ ");
   }
 
-  // Serial.print(" bCruiseLampMain-");
-  // Serial.print(temp.bCruiseLampMain);
-  // Serial.print(" bCruiseLampSet-");
-  // Serial.print(temp.bCruiseLampSet);
-  Serial.print(" bEngStat-");
-  Serial.print(temp.u8EngStat);
-  // Serial.print(" bGlowStat-");
-  // Serial.print(temp.bGlowStat);
-  // Serial.print(" bPreFuelCutIn-");
-  // Serial.print(temp.bPreFuelCutIn);
+  // Serial2.print(" bCruiseLampMain-");
+  // Serial2.print(temp.bCruiseLampMain);
+  // Serial2.print(" bCruiseLampSet-");
+  // Serial2.print(temp.bCruiseLampSet);
+  Serial2.print(" bEngStat-");
+  Serial2.print(temp.u8EngStat);
+  // Serial2.print(" bGlowStat-");
+  // Serial2.print(temp.bGlowStat);
+  // Serial2.print(" bPreFuelCutIn-");
+  // Serial2.print(temp.bPreFuelCutIn);
 }
 
 void canSniff_ems329(const CAN_message_t & msg)

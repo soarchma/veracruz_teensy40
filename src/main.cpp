@@ -16,7 +16,16 @@
 
 void setup()
 {
-  Serial.begin(115200); delay(500);
+  Serial.begin(115200);
+  Serial2.begin(115200);
+  delay(500);
+  /* Serial Example
+  // read from port 2, send to port 0:
+  if (Serial2.available()) {
+    int inByte = Serial.read();
+    Serial.write(inByte);
+  }
+  */
 
   board_init();
 

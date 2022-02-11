@@ -1,3 +1,4 @@
 .pioenvs
 .piolibdeps
 .pio/libdeps/teensy40/TimerInterrupt_Generic/examples
+.pio/build
